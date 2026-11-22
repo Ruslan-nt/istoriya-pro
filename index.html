@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17345d">
+  <meta name="description" content="История PRO — тренажёр истории России и мира для 10–11 классов и подготовки к ЕГЭ.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>История PRO</title>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><div class="logo">И</div><div><b>История PRO</b><small>10–11 класс · подготовка к ЕГЭ</small></div></div>
+  <button id="installBtn" class="install hidden">Установить</button>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow">ТВОЙ ИСТОРИЧЕСКИЙ ТРЕНАЖЁР</div>
+    <h1>Знания сегодня.<br><span>Уверенность на экзамене.</span></h1>
+    <p>Повторяй даты, изучай события и проверяй себя в удобном формате.</p>
+    <div class="stats">
+      <div><strong id="points">0</strong><small>баллов</small></div>
+      <div><strong id="answered">0</strong><small>ответов</small></div>
+      <div><strong id="streak">0</strong><small>тем изучено</small></div>
+    </div>
+  </section>
+  <nav class="tabs" aria-label="Разделы">
+    <button class="tab active" data-page="home">Главная</button>
+    <button class="tab" data-page="study">Программа</button>
+    <button class="tab" data-page="quiz">Тренажёр</button>
+    <button class="tab" data-page="dates">Даты</button>
+    <button class="tab" data-page="progress">Прогресс</button>
+  </nav>
+  <section id="page-home" class="page active">
+    <div class="section-head"><div><div class="eyebrow">НАЧНИ ЗАНИМАТЬСЯ</div><h2>Твоя подготовка</h2></div></div>
+    <div class="class-switch"><span>Мой класс</span><div><button data-grade="10" class="grade active">10 класс</button><button data-grade="11" class="grade">11 класс</button></div></div>
+    <div class="cards">
+      <button class="feature-card blue" data-go="study"><span class="feature-icon">▤</span><b>Учебная программа</b><small>Темы по истории России и мира</small><span class="arrow">→</span></button>
+      <button class="feature-card pale" data-go="quiz"><span class="feature-icon">✦</span><b>Тесты и ЕГЭ</b><small>Вопросы с объяснениями</small><span class="arrow">→</span></button>
+      <button class="feature-card pale" data-go="dates"><span class="feature-icon">◷</span><b>Исторические даты</b><small>Главные события по порядку</small><span class="arrow">→</span></button>
+      <button class="feature-card blue" data-go="progress"><span class="feature-icon">♜</span><b>Мой прогресс</b><small>Баллы и изученные темы</small><span class="arrow">→</span></button>
+    </div>
+    <div class="tip"><b>Совет дня</b><p>Запоминай исторические даты вместе с причинами, участниками и последствиями событий — так знания будут прочнее.</p></div>
+  </section>
+  <section id="page-study" class="page">
+    <div class="section-head"><div><div class="eyebrow">УЧЕБНЫЙ МАТЕРИАЛ</div><h2>Программа</h2></div></div>
+    <div class="filters"><button class="pill selected" data-subject="russia">История России</button><button class="pill" data-subject="world">Всемирная история</button></div>
+    <div id="topics" class="topic-list"></div>
+  </section>
+  <section id="page-quiz" class="page">
+    <div class="section-head"><div><div class="eyebrow">ПРОВЕРЬ СЕБЯ</div><h2>Тренажёр</h2></div><span class="tag">ЕГЭ · практика</span></div>
+    <div class="filters"><button class="pill selected" data-qsubject="all">Все темы</button><button class="pill" data-qsubject="russia">Россия</button><button class="pill" data-qsubject="world">Мир</button></div>
+    <div id="quizBox" class="quiz-box"></div>
+  </section>
+  <section id="page-dates" class="page">
+    <div class="section-head"><div><div class="eyebrow">ХРОНОЛОГИЯ</div><h2>Важные даты</h2></div></div>
+    <label class="search-label">Поиск по дате или событию<input id="dateSearch" type="search" placeholder="Например, 1812 или Крещение"></label>
+    <div id="dateList" class="timeline"></div>
+  </section>
+  <section id="page-progress" class="page">
+    <div class="section-head"><div><div class="eyebrow">ТВОИ РЕЗУЛЬТАТЫ</div><h2>Мой прогресс</h2></div></div>
+    <div class="progress-panel"><div class="big-number" id="progressPoints">0</div><b>баллов опыта</b><div class="progress-track"><i id="progressBar"></i></div><small id="levelText">Уровень 1 · до следующего уровня 100 баллов</small></div>
+    <h3>Достижения</h3><div id="badges" class="badges"></div>
+    <button id="resetBtn" class="secondary-btn">Сбросить прогресс на этом устройстве</button>
+  </section>
+</main>
+<footer>История PRO <span>Учебная версия · материалы можно дополнять</span></footer>
+<script src="app.js"></script>
+</body></html>

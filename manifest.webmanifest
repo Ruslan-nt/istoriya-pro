@@ -1,0 +1,19 @@
+{
+  "id": "./",
+  "name": "История PRO",
+  "short_name": "История PRO",
+  "description": "Подготовка по истории для 10–11 классов и ЕГЭ",
+  "lang": "ru",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f8fc",
+  "theme_color": "#17345d",
+  "categories": ["education", "books"],
+  "icons": [
+    {"src":"icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"icons/icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}
